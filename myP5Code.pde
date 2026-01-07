@@ -15,7 +15,7 @@ draw = function(){
   noStroke(); 
   
   // the beautiful blue sky
-  background(82+colorShade, 222+colorShade, 240);
+  background(82+colorShade, 222+colorShade, 240+greenshade);
     
   // The sun, a little circle on the horizon
   fill(255 +colorShade, 204+colorShade, 0+colorShade); 
