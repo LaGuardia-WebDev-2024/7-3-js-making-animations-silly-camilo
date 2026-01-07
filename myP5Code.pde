@@ -28,11 +28,14 @@ draw = function(){
   //ladybug
   fill(200,0,0);
   ellipse(ladybugx, 350, 10, 10);
+  ellipse(ladybugx - 10, 370, 8, 8);
+  ellipse(ladybugx - 20, 360, 4, 4);
+  ellipse(ladybugx - 13, 355, 4, 4);
 
   sunSize = sunSize + 1.5;
-  ladybugx = ladybugx + 1;
   colorShade = colorShade - 1;
   greenshade = greenshade -0.5;
+  ladybugx = mouseX;
 
   if(sunSize > 720){
   sunSize = 30;
