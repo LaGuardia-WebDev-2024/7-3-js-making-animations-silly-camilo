@@ -5,6 +5,9 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var ladybugx = 10;
+var colorShade = 0;
+var greenshade = 0;
 
 
 //🟢Draw Function - Runs on Repeat
@@ -12,19 +15,31 @@ draw = function(){
   noStroke(); 
   
   // the beautiful blue sky
-  background(82, 222, 240);
+  background(82+colorShade, 222+colorShade, 240);
     
   // The sun, a little circle on the horizon
-  fill(255, 204, 0);
+  fill(255 +colorShade, 204+colorShade, 0+colorShade); 
   ellipse(200, 298, sunSize, sunSize);
 
   // The land, blocking half of the sun
-  fill(76, 168, 67);
+  fill(76+greenshade, 168+greenshade, 67+greenshade);
   rect(0, 300, 400, 100);
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(ladybugx, 350, 10, 10);
+
+  sunSize = sunSize + 1.5;
+  ladybugx = ladybugx + 1;
+  colorShade = colorShade - 1;
+  greenshade = greenshade -0.5;
+
+  if(sunSize > 720){
+  sunSize = 30;
+  ladybugx = 10;
+  colorShade = 0;
+  greenshade = 0;
+}
 }
 
 
